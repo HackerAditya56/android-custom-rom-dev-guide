@@ -1,5 +1,5 @@
 # Android-Custom-rom-dev-guide
-This repository is for the android custom rom dev guide :)
+This repository is for the android custom rom dev helpful scripts :)
 
 | Steap | Topic to cover |
 |-|-|
