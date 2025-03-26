@@ -14,5 +14,3 @@ ccache -M 50G  # Increase cache size to 100GB for better reuse
 lunch derp_yogurt-user
 
 mka derp -j$(($(nproc --all)*2))  # Use double the number of CPU cores for parallel jobs
-
-# this script is just an example for device = yogurt and rom = derp you can change accroiding to your rom dev guide
