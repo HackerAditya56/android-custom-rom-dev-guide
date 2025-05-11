@@ -1,7 +1,7 @@
 <manifest>
-    <project name="SakthivelNadar/yogurt" path="kernel/micromax/yogurt" revision="android-13.0" remote="github" />
-    <project name="yogurt-devs/android_vendor_micromax_yogurt" path="vendor/micromax/yogurt" revision="lineage-20.0" remote="github" />
-    <project name="yogurt-devs/android_device_micromax_yogurt" path="device/micromax/yogurt" revision="lineage-20.0" remote="github" />
+    <project name="HackerAditya56/yogurt" path="kernel/micromax/yogurt" revision="master" remote="github" />
+    <project name="HackerAditya56/android_vendor_micromax_yogurt" path="vendor/micromax/yogurt" revision="lineage-20.0" remote="github" />
+    <project name="HackerAditya56/android_device_micromax_yogurt" path="device/micromax/yogurt" revision="lineage-20.0" remote="github" />
     
     <remote name="github"
             fetch="https://github.com/" />
