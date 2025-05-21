@@ -11,6 +11,6 @@ export CCACHE_EXEC=/usr/bin/ccache
 ccache -M 50G  # Increase cache size to 100GB for better reuse
 
 # Configure device
-lunch derp_yogurt-user
+lunch <device_codename>-user
 
 mka derp -j$(($(nproc --all)*2))  # Use double the number of CPU cores for parallel jobs
