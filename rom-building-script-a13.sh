@@ -13,4 +13,5 @@ ccache -M 50G  # Increase cache size to 100GB for better reuse
 # Configure device
 lunch <device_codename>-user
 
-mka derp -j$(($(nproc --all)*2))  # Use double the number of CPU cores for parallel jobs
+mka <the_rom_you_are_making*> -j$(($(nproc --all)*2)) # * the_rom_you_are_making for eg. for derpfest = derp
+# Use double the number of CPU cores for parallel jobs
