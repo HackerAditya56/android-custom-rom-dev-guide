@@ -221,8 +221,12 @@ import com.android.server.LocalServices;
 import com.android.server.SystemServiceManager;
 import com.android.server.inputmethod.InputMethodManagerInternal;
 import com.android.server.policy.KeyCombinationManager.TwoKeysCombinationRule;
+
+// by me
 import com.android.server.policy.PhoneWindowManager.MyWakeGestureListener;
 import com.android.server.policy.PhoneWindowManager.SettingsObserver;
+// end by me 
+
 import com.android.server.policy.keyguard.KeyguardServiceDelegate;
 import com.android.server.policy.keyguard.KeyguardServiceDelegate.DrawnListener;
 import com.android.server.policy.keyguard.KeyguardStateMonitor.StateCallback;
@@ -257,6 +261,7 @@ import java.util.Set;
 // add by me
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+// end by me
 
 
 import com.android.internal.derp.hardware.LineageHardwareManager;
@@ -867,6 +872,8 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                     KeyEvent event = (KeyEvent) msg.obj;
                     mIsLongPress = true;
                     break;
+
+	    // by me
             }
         }
     }
@@ -927,6 +934,8 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                 // If the app is uninstalled, clear the stored value and prompt again.
                 Settings.System.putString(mContext.getContentResolver(), "extra_button_app", null);
                 handleExtraButtonPress();
+
+		// end by me
             }
         }
     }
@@ -4010,7 +4019,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
 
                 if (initialDown) {
                     mFallbackActions.put(keyCode, fallbackAction);
-                } else if (event.getAction() == KeyEvent.ACTION_UP) {
+                } else if (event.getAction() == KeyEvent.) {
                     mFallbackActions.remove(keyCode);
                     fallbackAction.recycle();
                 }
@@ -4567,16 +4576,18 @@ public class PhoneWindowManager implements WindowManagerPolicy {
     @Override
     public int interceptKeyBeforeQueueing(KeyEvent event, int policyFlags) {
         final int keyCode = event.getKeyCode();
-        final boolean down = event.getAction() == KeyEvent.ACTION_UP;
+        final boolean down = event.getAction() == KeyEvent.ACTION_UP; // by me ACTION_UP 
         boolean isWakeKey = (policyFlags & WindowManagerPolicy.FLAG_WAKE) != 0
                 || event.isWakeKey();
 
+	// by me
         if (keyCode == KeyEvent.KEYCODE_MOVE_HOME) { // 122
             if (down) {
                 handleExtraButtonPress();
             }
             return 0; // Consume the event
         }
+	// end by me
         
 
         if (!mSystemBooted) {
