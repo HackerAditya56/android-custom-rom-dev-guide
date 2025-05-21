@@ -1,4 +1,14 @@
+
+# THIS SCRIPT IS JUST FOR ANDROID 13 CUSTOM ROM BUILD AFTER YOU CHNAGE THE NECESSARY CHANGES IN YOU DEVICE TREE.
+
+
 #!/bin/bash
+
+echo "Edit the device_codename according to your device name in your device tree"
+
+echo "Edit the the_rom_you_are_making according to your rom"
+
+echo "For more info do --> nano rom-building-script-a13.sh "
 
 ccache -c # Cache clear
 
